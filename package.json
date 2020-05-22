@@ -1,0 +1,22 @@
+{
+  "name": "python_serverless_framework",
+  "version": "1.0.0",
+  "description": "This is a project using Python, Serverless Framework and serverless offline plugin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "serverless offline start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YifengZhong/python_serverless_framework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YifengZhong/python_serverless_framework/issues"
+  },
+  "homepage": "https://github.com/YifengZhong/python_serverless_framework#readme",
+  "devDependencies": {
+    "serverless-offline-python": "^3.22.2"
+  }
+}
