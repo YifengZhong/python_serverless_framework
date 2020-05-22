@@ -1,0 +1,13 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - npm install
+      - npm install -g serverless
+      - pip install --upgrade pip
+  build:
+    commands:
+      - serverless deploy
+  post_build:
+    commands:
+      # - . ./test.sh
