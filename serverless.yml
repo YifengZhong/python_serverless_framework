@@ -24,6 +24,8 @@ plugins:
 provider:
   name: aws
   runtime: python3.7
+  runtime: nodejs10.x
+  role: arn:aws:iam::846925734496:role/CloudformationYifengZhong
 
 # you can overwrite defaults here
 #  stage: dev
