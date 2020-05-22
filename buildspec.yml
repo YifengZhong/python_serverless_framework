@@ -7,7 +7,7 @@ phases:
       - pip install --upgrade pip
   build:
     commands:
-      - serverless deploy
+      - serverless deploy --stage cicd | tee deploy.out
   post_build:
     commands:
       # - . ./test.sh
