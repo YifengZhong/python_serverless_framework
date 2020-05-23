@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10.x
+      python: 3.x  
+    commands:
+      - npm install
+      - npm install -g serverless
+      - pip install --upgrade pip
+  build:
+    commands:
+      - pytest *_test.py
+  post_build:
+    commands:
+      # - . ./test.sh
