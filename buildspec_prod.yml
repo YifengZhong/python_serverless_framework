@@ -8,9 +8,11 @@ phases:
       - npm install
       - npm install -g serverless
       - pip install --upgrade pip
+      - pip install -U pytest
   build:
     commands:
-      - serverless deploy --stage cicd | tee deploy.out
+      - pytest
+      - serverless deploy
   post_build:
     commands:
       # - . ./test.sh
