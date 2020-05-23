@@ -22,6 +22,10 @@ Windows, Visual Stuido Code, Git bash,Python 3.7
 		aws_access_key_id = XXXXXXX
 		aws_secret_access_key = XXXXXXXXXXXXX
 	</code>
+
+## Features
+1. offline debug
+2. Separate prod build and develp build	
 	
 ## Use Serverless-offline
 Refer to https://www.npmjs.com/package/serverless-offline-python
