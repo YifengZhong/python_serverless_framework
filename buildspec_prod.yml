@@ -8,7 +8,7 @@ phases:
       - npm install
       - npm install -g serverless
       - pip install --upgrade pip
-      - pip install -U pytest
+      # - pip install -U pytest
   build:
     commands:
       - pytest
