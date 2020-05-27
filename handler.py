@@ -3,6 +3,7 @@ import json
 
 def hello(event, context):
     if event['httpMethod'] == 'OPTIONS':
+        print("in OPTIONS")
         return {
             "statusCode": 204,
             "headers": {
