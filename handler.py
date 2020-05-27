@@ -2,17 +2,17 @@ import json
 
 
 def hello(event, context):
-    # if event['httpMethod'] == 'OPTIONS':
-    #     print("in OPTIONS")
-    #     return {
-    #         "statusCode": 204,
-    #         "headers": {
-    #         'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key',
-    #         'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE',
-    #         'Access-Control-Allow-Origin': '*',
-    #         },
-    #         "body": None,            
-    #     }
+    if event['httpMethod'] == 'OPTIONS':
+        print("in OPTIONS")
+        return {
+            "statusCode": 204,
+            "headers": {
+            'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key',
+            'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE',
+            'Access-Control-Allow-Origin': '*',
+            },
+            "body": None,            
+        }
     body = {
         "message": "Hello World!!"
     }
