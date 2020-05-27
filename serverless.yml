@@ -68,7 +68,7 @@ functions:
           method: get    
       - http:
           method: options
-          path: user-api/v1/growers/{id}/dataRelease
+          path: hello
           cors: true          
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
