@@ -11,7 +11,7 @@ phases:
       # - pip install -U pytest
   build:
     commands:
-      - pytest
+      # - pytest
       - serverless deploy
   post_build:
     commands:
