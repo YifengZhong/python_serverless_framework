@@ -13,7 +13,6 @@ def hello(event, context):
     #         },
     #         "body": None,            
     #     }
-    #
     body = {
         "message": "Hello World!!"
     }
