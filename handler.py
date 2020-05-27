@@ -21,7 +21,7 @@ def hello(event, context):
         "statusCode": 200,
         "body": json.dumps(body),
         "headers": { 
-            "Access-Control-Allow-Origin": "*" 
+            "Access-Control-Allow-Origin": "*"    #this code slove the cross access control issu CORS policy: 
         }        
     }
     print("hello")
