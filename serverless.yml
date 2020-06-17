@@ -66,6 +66,13 @@ functions:
           path: hello
           cors: true
           method: get    
+  getNameById:
+    handler: handler.getNameById
+    events:
+      - http:
+          path: getNameById
+          cors: true
+          method: post    
       # - http:
       #     method: options
       #     path: hello

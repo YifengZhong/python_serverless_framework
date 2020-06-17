@@ -1,37 +1,47 @@
 import json
+import pymysql
+import traceback
 
 
 def hello(event, context):
-    # if event['httpMethod'] == 'OPTIONS':
-    #     print("in OPTIONS")
-    #     return {
-    #         "statusCode": 204,
-    #         "headers": {
-    #         'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key',
-    #         'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE',
-    #         'Access-Control-Allow-Origin': '*',
-    #         },
-    #         "body": None,            
-    #     }
+
     body = {
         "message": "Hello World!!"
     }
 
-    response = {
+    print("hello")
+    return responseSuccess(body)
+
+    # Use this code if you don't use the http event with the LAMBDA-PROXY
+    # integration
+
+def responseSuccess(body):
+    return {
         "statusCode": 200,
         "body": json.dumps(body),
         "headers": { 
             "Access-Control-Allow-Origin": "*"    #this code slove the cross access control issu CORS policy: 
         }        
     }
-    print("hello")
-    return response
 
-    # Use this code if you don't use the http event with the LAMBDA-PROXY
-    # integration
-    """
-    return {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "event": event
+def getNameById(event, context):
+    print("in getNameById")
+    body = json.loads(event["body"])
+    id = body["id"]
+    print("querybyId:{}.".format(id))
+    conn = getDBConnection()
+    body = {
+        "message": "Lambda End!!"
     }
-    """
+    return responseSuccess(body)
+
+    # queryById(id)
+
+def getDBConnection():
+    try:
+        conn = pymysql.connect("localhost", user="root",
+                               passwd="Zhong86915237#", db="world", connect_timeout=10)
+        return conn
+    except Exception as e:
+        print("An exception occurred while trying connecting db:", e)
+        traceback.print_exc()
